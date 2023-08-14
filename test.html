@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet Quacky</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .quack-text {
+            display: inline-block;
+            animation: rainbowText 3s infinite;
+            cursor: pointer;
+        }
+
+        .quack-text2 {
+            display: inline-block;
+            font-size: 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to Quacky's World. <br> Now say <span class="quack-text" onclick="playQuackSound()"> <u>QUACK!</u>
+                🦆</span>
+            <br> <span class="quack-text2" onclick="playQuackSound2()"> <i>Intensify QUACKKK!</i> </span>
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="#duck-info">About</a></li>
+                <li><a href="#duck-gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="duck-info" class="duck-info">
+        <div class="container">
+            <h2>About Ducks</h2>
+            <p>
+                Ducks are amazing creatures that have fascinated humans for centuries.
+                Their ability to fly, swim, and adapt to various environments makes them truly unique.
+                The one and only Quacky, join him on his incredible journey.
+            </p>
+            <a href="#duck-gallery" class="button">Embark on a Journey with Quacky</a>
+        </div>
+    </section>
+
+    <section id="duck-gallery" class="duck-gallery">
+        <div class="container">
+          <h2>Duck Gallery</h2>
+          <div class="image-grid">
+            <div class="image-container">
+              <img src="Quacky the DUCK.png" alt="Duck 1">
+              <div class="image-info">
+                <p>Description for Duck 1</p>
+              </div>
+            </div>
+            <div class="image-container">
+              <img src="Quacky and friend.png" alt="Duck 2">
+              <div class="image-info">
+                <p>Description for Duck 2</p>
+              </div>
+            </div>
+            <div class="image-container">
+              <img src="What ya looking at!.png" alt="Duck 3">
+              <div class="image-info">
+                <p>Description for Duck 3</p>
+              </div>
+            </div>
+            <div class="image-container">
+                <img src="Thinking about future.png" alt="Duck 4">
+                <div class="image-info">
+                  <p>Description for Duck 4</p>
+                </div>
+            </div>
+            <!-- Add more ducklings here, obviously we need more quacks!-->
+          </div>
+        </div>
+      </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Quacky</h2>
+            <p>
+                If you want to quack with us, drop us a message! For any inquiries, suggestions, or just to say hello to
+                Quacky, you can reach out to us via the following methods:
+            </p>
+            <ul>
+                <li>Email: quacky@quackysworld.com</li>
+                <li>Phone: +1 (123) 456-7890</li>
+                <li>Follow us on social media:</li>
+                <ul>
+                    <li>Instagram: @quackysworld</li>
+                    <li>Twitter: @quackyofficial</li>
+                    <li>Facebook: /quackysworld</li>
+                </ul>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Quacky's World. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const exploreBtn = document.querySelector('.button');
+        const gallerySection = document.querySelector('#duck-gallery');
+
+        exploreBtn.addEventListener('click', () => {
+            gallerySection.scrollIntoView({ behavior: 'smooth' });
+        });
+
+        function playQuackSound() {
+            const audio = new Audio('quacksmoll.mp3'); //smoll
+            audio.play();
+        }
+
+        function playQuackSound2() {
+            const audio = new Audio('quackbig.mp3'); //big
+            audio.play();
+        }
+
+        // Smooth scrolling for navigation links
+        const navLinks = document.querySelectorAll('nav a');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', e => {
+                e.preventDefault();
+                const target = document.querySelector(link.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+    </script>
+</body>
+
+</html>

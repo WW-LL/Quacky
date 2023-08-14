@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet Quacky</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <style>
+        .quack-text {
+            display: inline-block;
+            animation: rainbowText 3s infinite;
+            cursor: pointer;
+        }
+
+        .quack-text2 {
+            display: inline-block;
+            font-size: 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to Quacky's World. <br> Now say <span class="quack-text" onclick="playQuackSound()"> <u>QUACK!</u>
+                🦆</span>
+            <br> <span class="quack-text2" onclick="playQuackSound2()"> <i>Intensify QUACKKK!</i> </span>
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="#duck-info">About</a></li>
+                <li><a href="#duck-gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="duck-info" class="duck-info">
+        <div class="container">
+            <h2>About Quacky</h2>
+            <p style=" text-align: justify;">
+                In the quacktastic world of Pondville, there lived a charming and mischievous little
+                duck named Quacky. Quacky wasn't your ordinary duck; he was anything but ordinary! While the other ducks
+                spent their days swimming gracefully and quacking politely, Quacky had a different approach to life. <br><br>
+
+                You see, Quacky was known far and wide for his exceptionally loud and hilarious quacks. Whenever he
+                opened his beak, the entire pond would erupt with laughter. Even the fish couldn't resist giggling
+                underwater! Quacky's quacks were so loud that the nearby frogs thought they were attending a
+                quack-tastic concert.<br><br>
+
+                Every morning, as the sun peeked over the horizon, Quacky would wake up the entire pond with a
+                resounding "QUACK-A-DOODLE-DOO!" His quack alarm clock was like no other, and the sleepy turtles and
+                snails would grumble, "Oh, Quacky, why can't you be a bit less quack-tastic in the mornings?"<br><br>
+
+                But Quacky didn't mind; he lived for the joy he spread with each quack. He believed that laughter was
+                the best medicine for a quack-tastic day. Whether it was doing funny duck dances or telling quack-tastic
+                jokes, Quacky was always on a mission to bring smiles to everyone's beaks.<br><br>
+
+                Quacky's playful and adventurous spirit brought the community of Pondville together like never before.
+                Ducks from neighboring ponds would travel miles just to witness the quack-tastic wonder of Quacky. He
+                became the mascot of happiness, the guardian of giggles, and the ruler of quackdom!<br><br>
+
+                So, if you ever find yourself near Pondville, listen closely for the unmistakable sound of a quack like
+                no other. Follow the laughter, and you'll surely discover Quacky, the quacktastic duck with a heart full
+                of joy and a beak full of humor. Join him in spreading quack-tastic cheer, and remember, life is always
+                better when you quack out loud!
+            </p>
+            <button class="button" onclick="openGameModal()">Embark on a Journey with Quacky</button>
+        </div>
+
+    </section>
+
+    <section id="duck-gallery" class="duck-gallery">
+        <div class="container">
+            <h2>Duck Gallery</h2>
+            <div class="image-grid">
+                <div class="image-container" data-traits="Funny, Quacky, Adorable, Playful, Mischievous">
+                    <img src="Quacky the DUCK.png" alt="Duck 1">
+                    <div class="image-info">
+                        <p>This is Quacky, the most famous duck in the universe.
+                            He loves quacking and spreading joy to everyone he meets. If you ever hear a "QUACK!" in the
+                            sky, you can be sure Quacky is around.</p>
+                    </div>
+                    <div class="image-description">Quacky the DUCK</div> <!-- Add a div for the short description -->
+                    <div class="short-description" style="display: none;">
+                        Quacky, the charming duck with a bright yellow beak, has a heart of gold. Always ready to spread
+                        joy with a resounding "QUACK!" that echoes through the skies.
+                    </div>
+                    <div class="traits-list" style="display: none;">
+                        <ul>
+                            <li>Funny</li>
+                            <li>Quacky</li>
+                            <li>Adorable</li>
+                            <li>Playful</li>
+                            <li>Mischievous</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="image-container" data-traits="Energetic, Curious, Playful, Adventurous, Friendly">
+                    <img src="Quacky and friend.png" alt="Duck 2">
+                    <div class="image-info">
+                        <p>Here's Quacky hanging out with his best feathered friend. They're always up to some
+                            duck-tastic adventures together. From exploring new ponds to planning daring quack raids,
+                            their friendship knows no bounds!</p>
+                    </div>
+                    <div class="image-description">Quacky and friend</div>
+                    <div class="short-description" style="display: none;">
+                        Meet Quacky, the adventurous duck, and his best buddy. Together, they explore uncharted waters,
+                        uncovering hidden treasures and making memories that will last a lifetime.
+                    </div>
+                    <div class="traits-list" style="display: none;">
+                        <ul>
+                            <li>Energetic</li>
+                            <li>Curious</li>
+                            <li>Playful</li>
+                            <li>Adventurous</li>
+                            <li>Friendly</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="image-container" data-traits="Brave, Adventurous, Fearless, Resilient, Noble">
+                    <img src="What ya looking at!.png" alt="Duck 3">
+                    <div class="image-info">
+                        <p>Quacky has an inquisitive gaze that can melt even the iciest of hearts. With those big,
+                            adorable eyes, he can convince anyone to join his quack brigade. Don't be shy; give him a
+                            quack back!</p>
+                    </div>
+                    <div class="image-description">What ya looking at!</div>
+                    <div class="short-description" style="display: none;">
+                        With an air of curiosity, Quacky gazes into the horizon, pondering the vastness of the world.
+                        Fearless and determined, he embarks on daring escapades, inspiring others to chase their dreams.
+                    </div>
+                    <div class="traits-list" style="display: none;">
+                        <ul>
+                            <li>Brave</li>
+                            <li>Adventurous</li>
+                            <li>Fearless</li>
+                            <li>Resilient</li>
+                            <li>Noble</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="image-container" data-traits="Dreaming">
+                    <img src="Thinking about future.png" alt="Duck 4">
+                    <div class="image-info">
+                        <p>Quacky is a deep thinker and a visionary duck. Here he is, contemplating the mysteries of
+                            life and planning his next grand quack-speriment. Who knows what amazing quack-tastic
+                            innovations he'll bring to the world?</p>
+                    </div>
+                    <div class="image-description">Just dreaming</div>
+                    <div class="short-description" style="display: none;">
+                        Quacky, the dreamer with a heart full of imagination, often drifts away to a world of
+                        possibilities. In his daydreams, he envisions a quacking symphony that will unite all ducks.
+                    </div>
+                    <div class="traits-list" style="display: none;">
+                        <ul>
+                            <li>Dreaming</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Add more ducklings here, obviously we need more quacks!-->
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Quacky</h2>
+            <p>
+                If you want to quack with us, drop us a message! For any inquiries, suggestions, or just to say hello to
+                Quacky, you can reach out to us via the following methods:
+            </p>
+            <ul class="contact-info">
+                <li class="contact-item">
+                    <i class="contact-icon fas fa-envelope"></i>
+                    <span>Email: quacky@quackysworld.com</span>
+                </li>
+                <li class="contact-item">
+                    <i class="contact-icon fas fa-phone"></i>
+                    <span>Phone: +1 (123) 456-7890</span>
+                </li>
+                <li class="contact-item">
+                    <i class="contact-icon fab fa-instagram"></i>
+                    <span>Instagram: @quackysworld</span>
+                </li>
+                <li class="contact-item">
+                    <i class="contact-icon fab fa-twitter"></i>
+                    <span>Twitter: @quackyofficial</span>
+                </li>
+                <li class="contact-item">
+                    <i class="contact-icon fab fa-facebook"></i>
+                    <span>Facebook: /quackysworld</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modalImage" src="" alt="Duck">
+            <div class="image-info">
+                <p></p>
+            </div>
+            <div class="duck-traits">
+                <h2 id="modalTitle"></h2>
+                <p id="modalShortDetails"></p>
+                <h3>Traits:</h3>
+                <ul id="duckTraitsList">
+                    <!-- Traits will be dynamically added here through JavaScript -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+      <!-- The Game Modal -->
+      <div id="gameModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeGameModal()">&times;</span>
+            <canvas id="gameCanvas" width="800" height="600"></canvas>
+            <div class="game-over" id="gameOver">
+                <h2>Game Over!</h2>
+                <p>Your Score: <span id="score">0</span></p>
+                <button onclick="restartGame()">Play Again</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="modalOverlay" class="modal-overlay"></div>
+
+     <!-- Chatbot Container -->
+  <div class="chatbot-container" id="chatbotContainer">
+    <div class="chat-header">Chat with Quacky</div>
+    <div class="chat-body" id="chatBody">
+      <!-- Chat messages will be appended here -->
+    </div>
+    <div class="chat-input">
+      <input type="text" id="userInput" placeholder="Type your message...">
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <!-- Chatbot Icon -->
+  <button onclick="toggleChatbot()" class="chatbot-icon">🦆</button>
+
+  <!-- Jump to Top Button -->
+  <button onclick="scrollToTop()" class="jump-to-top">↑</button>
+
+    <footer>
+        <p>&copy; 2023 Quacky's World. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const exploreBtn = document.querySelector('.button');
+        const gallerySection = document.querySelector('#duck-gallery');
+
+        exploreBtn.addEventListener('click', () => {
+            gallerySection.scrollIntoView({ behavior: 'smooth' });
+        });
+
+        function playQuackSound() {
+            const audio = new Audio('quacksmoll.mp3'); //smoll
+            audio.play();
+        }
+
+        function playQuackSound2() {
+            const audio = new Audio('quackbig.mp3'); //big
+            audio.play();
+        }
+
+        // Smooth scrolling for navigation links
+        const navLinks = document.querySelectorAll('nav a');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', e => {
+                e.preventDefault();
+                const target = document.querySelector(link.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+
+        function openModal() {
+            const modal = document.getElementById('myModal');
+            modal.style.display = 'block';
+            document.body.classList.add('blur-background'); // Add blur effect to the background
+
+            // Get the clicked image and its traits
+            const clickedImage = event.target;
+            const imageContainer = clickedImage.closest('.image-container'); // Use closest() to find the parent container
+            const longDescription = imageContainer.querySelector('.image-info p').innerHTML;
+            const shortName = imageContainer.querySelector('.image-description').innerText;
+            const shortDescription = imageContainer.querySelector('.short-description').innerText; // Get the short description
+            const traitsList = imageContainer.dataset.traits.split(',');
+
+            // Set the description in the modal
+            document.querySelector('.modal-content .image-info p').innerHTML = longDescription;
+
+            // Set the image source in the modal
+            document.getElementById('modalImage').src = clickedImage.src;
+
+            // Set the short name and short details in the modal
+            document.getElementById('modalTitle').textContent = shortName;
+            document.getElementById('modalShortDetails').textContent = shortDescription;
+
+            // Clear previous traits
+            const traitsListElement = document.getElementById('duckTraitsList');
+            traitsListElement.innerHTML = '';
+
+            // Set the traits in the modal
+            traitsList.forEach((trait) => {
+                const li = document.createElement('li');
+                li.textContent = trait;
+                traitsListElement.appendChild(li);
+            });
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('myModal');
+            modal.style.display = 'none';
+            document.body.classList.remove('blur-background'); // Remove blur effect from the background
+        }
+
+        // Add event listener to each image to open the modal
+        const images = document.querySelectorAll('.image-grid img');
+        images.forEach((img) => {
+            img.addEventListener('click', () => {
+                openModal();
+                document.getElementById('modalImage').src = img.src; // Set modal image source
+            });
+        });
+
+        // Function to send user message and get bot response
+function sendMessage() {
+  const userInput = document.getElementById('userInput').value;
+  const chatBody = document.getElementById('chatBody');
+
+  // Append user message to chat body
+  chatBody.innerHTML += `<div class="user-message">${userInput}</div>`;
+
+  // Call a function to get bot response based on user input
+  const botResponse = getBotResponse(userInput);
+
+  // Append bot response to chat body
+  chatBody.innerHTML += `<div class="bot-message">${botResponse}</div>`;
+
+  // Clear the user input field
+  document.getElementById('userInput').value = '';
+}
+
+// Example function to generate bot response (Replace this with your actual chatbot logic)
+function getBotResponse(userInput) {
+  return `Hello! This is Quacky's chatbot. You said: "${userInput}". I'm just a simple example, but you can integrate a more advanced chatbot with AI capabilities for your website!`;
+}
+
+// Function to scroll to the top of the page
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Show or hide the Jump to Top button based on the user's scroll position
+window.addEventListener('scroll', () => {
+  const jumpToTopButton = document.querySelector('.jump-to-top');
+  if (window.scrollY > 300) {
+    jumpToTopButton.style.display = 'block';
+  } else {
+    jumpToTopButton.style.display = 'none';
+  }
+});
+
+// JavaScript for toggling chatbot visibility
+let chatbotOpen = false;
+
+function toggleChatbot() {
+  const chatbotContainer = document.getElementById('chatbotContainer');
+  chatbotOpen = !chatbotOpen;
+
+  if (chatbotOpen) {
+    chatbotContainer.style.display = 'block';
+  } else {
+    chatbotContainer.style.display = 'none';
+  }
+}
+
+function sendMessage() {
+    const userInput = document.getElementById('userInput');
+    const userMessage = userInput.value.trim();
+
+    if (userMessage !== '') {
+      appendMessage('user', userMessage);
+      userInput.value = '';
+      // For demonstration purposes, we'll simulate a response after a short delay
+      setTimeout(sendResponse, 1000, userMessage);
+    }
+  }
+
+  function sendResponse(userMessage) {
+    const responseMessage = getResponse(userMessage);
+    appendMessage('chatbot', responseMessage);
+  }
+
+  function getResponse(userMessage) {
+    // This is a placeholder function to provide a response based on user input
+    // You can customize this function to interact with your chatbot backend
+    // and return an appropriate response
+    if (userMessage.toLowerCase().includes('hello')) {
+      return 'Hello! How can I assist you today?';
+    } else if (userMessage.toLowerCase().includes('help')) {
+      return 'Sure, I am here to help! What do you need assistance with?';
+    } else {
+      return 'I am sorry, I did not understand that. Can you please rephrase?';
+    }
+  }
+
+  function appendMessage(sender, message) {
+    const chatBody = document.getElementById('chatBody');
+    const chatMessage = document.createElement('div');
+    chatMessage.className = `chat-message ${sender === 'user' ? 'user-message' : 'chatbot-message'}`;
+    chatMessage.innerText = message;
+    chatBody.appendChild(chatMessage);
+    chatBody.scrollTop = chatBody.scrollHeight;
+  }
+
+
+
+    </script>
+    <script src="game.js"></script>
+
+</body>
+
+</html>
